@@ -76,4 +76,17 @@
   }
 
   // Your custom JavaScript goes here
+  
+  //Task 1 bacon cloning
+
+  const baconCloner = document.querySelector('div#overview button') 
+  if (baconCloner) {
+    baconCloner.addEventListener('click', (event) => {
+      const baconImg = document.querySelector('div#overview img[alt="Bacon"]');
+      if (baconImg) {
+        baconImg.parentNode.appendChild(baconImg.cloneNode());
+      }
+    })
+  }
+
 })();
