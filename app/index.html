@@ -51,6 +51,8 @@
 
     <!-- Your styles -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/form-fields.css">
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -68,6 +70,7 @@
           <a href="#features" class="mdl-layout__tab">Details</a>
           <a href="#features" class="mdl-layout__tab">Technology</a>
           <a href="#features" class="mdl-layout__tab">FAQ</a>
+          <a href="#checkout" class="mdl-layout__tab">Checkout</a>
           <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
             <i class="material-icons" role="presentation">add</i>
             <span class="visuallyhidden">Add</span>
@@ -75,7 +78,7 @@
         </div>
       </header>
       <main class="mdl-layout__content">
-        <div class="mdl-layout__tab-panel is-active" id="overview">
+        <div class="mdl-layout__tab-panel " id="overview">
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
               <i class="material-icons">play_circle_filled</i>
@@ -228,6 +231,161 @@
             </div>
           </section>
         </div>
+        <div class="mdl-layout__tab-panel is-active" id="checkout">
+          <form class="mdl-grid" name="checkout">
+          <div class="mdl-cell mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-grid">
+            <div class="checkout-card mdl-cell mdl-cell--12-col mdl-grid">
+              <div class="checkout-card__title">
+                <span>
+                  <span class="circled">1</span><span>Personal Information</span>
+                </span>
+              </div>
+              <div class="checkout-card__content mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+                  <text-field
+                    name="firstName"
+                    label="First name"
+                    placeholder="Elon"
+                  </text-field>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+                  <text-field
+                    name="lastName"
+                    label="Last name"
+                    placeholder="Musk"
+                  </text-field>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col">
+                  <text-field
+                    name="Email"
+                    label="Email"
+                    placeholder="elon@spacex.com"
+                  </text-field>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+                  <select-field
+                    name="Country"
+                    label="Country"
+                    placeholder="USA"
+                    options='["USA", "Every", "Other", "Country", "Known", "To", "Man"]'
+                  </select-field>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+                  <text-field
+                    name="Postal Code"
+                    label="Postal Code"
+                    placeholder="10001"
+                  </text-field>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col">
+                  <text-field
+                    name="Phone Number"
+                    label="Phone Number"
+                    placeholder="(212) 692-93-92"
+                  </text-field>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-card mdl-cell mdl-cell--12-col mdl-grid">
+              <div class="checkout-card__title">
+                <span>
+                  <span class="circled">2</span><span>Payment details </span> 
+                  <i class="material-icons checkout-card__icon">lock</i>
+                </span>
+              </div>
+              <div class="checkout-card__content mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                  <text-field
+                    name="creditCard"
+                    label="Credit Card Number"
+                    placeholder="000-0000-0000-0000"
+                    append-icon="expand_more"
+                    icon-url="/images/visa.png"
+                  </text-field>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+                  <text-field
+                    name="securityCode"
+                    label="SecurityCode"
+                    placeholder="***"
+                    append-icon="help_outline"
+                  </text-field>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+                  <text-field
+                    name="expirationDate"
+                    label="Expiration Date"
+                    placeholder="MM/YY"
+                  </text-field>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="checkout-summary mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-grid">
+              <div class="checkout-card__title checkout-card__title--summary mdl-cell mdl-cell--12-col">
+                <span>
+                  <span>Your Order</span>
+                </span>
+              </div>
+              <div class="checkout-summary__section">
+                <div class="checkout-summary__item">
+                  <div>
+                    Apple Watch Sport
+                  </div>
+                  <div class="checkout-summary__price">
+                    580
+                  </div>
+                </div>
+                <div class="checkout-summary__item">
+                  <div>
+                    Modern buckle
+                  </div>
+                  <div class="checkout-summary__price">
+                    380
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-summary__section">
+                <div class="checkout-summary__item">
+                  <div>
+                    Total purchases
+                  </div>
+                  <div class="checkout-summary__price">
+                    960.00
+                  </div>
+                </div>
+                <div class="checkout-summary__item">
+                  <div>
+                    Estimated tax
+                  </div>
+                  <div class="checkout-summary__price">
+                    0
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-summary__section">
+                <div class="checkout-summary__item">
+                  <div>
+                    Total
+                  </div>
+                  <div class="checkout-summary__price">
+                    960
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-card mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-grid">
+              <div class="checkout-button mdl-cell mdl-cell--12-col">
+                <div>
+                  <i class="material-icons">shopping_cart</i> 
+                  <span>
+                    Complete Purchase
+                  </span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
         <footer class="mdl-mega-footer">
           <div class="mdl-mega-footer--middle-section">
             <div class="mdl-mega-footer--drop-down-section">
@@ -287,6 +445,7 @@
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/components/text-field.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
