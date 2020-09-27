@@ -1,6 +1,7 @@
 class TextField extends HTMLElement {
   constructor() {
     super();
+
     const appendIcon = this.getAttribute('append-icon')
     let icon = ``;
     if (appendIcon) {
@@ -13,7 +14,7 @@ class TextField extends HTMLElement {
             <div class="input-container">
             <label for="${this.getAttribute('name')}">${this.getAttribute('label')}</label>
             <input 
-                type="${this.getAttribute('type')|| 'text'}"
+                type="${this.getAttribute('type') || 'text'}"
                 value="${this.getAttribute('value') || ''}" 
                 placeholder="${this.getAttribute('placeholder') || ''}" 
                 name="${this.getAttribute('name')}"></input>

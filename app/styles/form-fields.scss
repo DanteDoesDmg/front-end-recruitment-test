@@ -1,6 +1,7 @@
 $append-width: 32px;
 
 .custom-formfield {
+  box-sizing: border-box;
   position: relative;
   background-color: white;
   border-radius: 3px;
@@ -73,4 +74,8 @@ $append-width: 32px;
       display: none;
     }
   }
+}
+
+.custom-formfield--error {
+  border: 1px dotted rgba(250, 0, 0, 0.9);
 }
