@@ -13,7 +13,7 @@ class TextField extends HTMLElement {
             <div class="input-container">
             <label for="${this.getAttribute('name')}">${this.getAttribute('label')}</label>
             <input 
-                type="text"
+                type="${this.getAttribute('type')|| 'text'}"
                 value="${this.getAttribute('value') || ''}" 
                 placeholder="${this.getAttribute('placeholder') || ''}" 
                 name="${this.getAttribute('name')}"></input>
